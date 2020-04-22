@@ -121,6 +121,7 @@ if (20 > 5 && "nico" === "nico") {
 
 //Dom if-else function
 
+/*
 const BASE_COLOR = "rgb(52, 73, 94)";
 const OTHER_COLOR = "#7f8c8d";
 
@@ -135,6 +136,28 @@ function handleClick() {
 
 function init() {
     title.style.color = BASE_COLOR;
+    title.addEventListener("click", handleClick);
+}
+
+init();
+*/
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+    title.classList.toggle(CLICKED_CLASS);
+
+    /*
+    const hasClass = title.classList.contains(CLICKED_CLASS);
+    if (!hasClass) {
+        title.classList.add(CLICKED_CLASS);
+    } else {
+        title.classList.remove(CLICKED_CLASS);
+    }
+    */
+}
+
+function init() {
     title.addEventListener("click", handleClick);
 }
 
