@@ -52,3 +52,35 @@ console.log(MyInfo.age);
 
 MyInfo.age = 28;
 console.log(MyInfo.age);
+
+//Function
+function sayHello() {
+    console.log('Hello!');
+}
+
+sayHello();
+
+function sayHello(potato) {
+    console.log('Hello!', potato);
+}
+
+sayHello("Nicolas");
+
+function sayHi(name, age) {
+    console.log(`Hello ${name} you are ${age} years old`);
+    return `Hello ${name} you are ${age} years old`;
+}
+
+sayHi("Nocolas");
+const NicoHi = sayHi("Nicolas");
+
+console.log(NicoHi);
+
+const calculator = {
+    plus: function (a, b) {
+        return a + b;
+    }
+}
+
+const plus = calculator.plus(5, 5);
+console.log(plus);
