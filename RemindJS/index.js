@@ -1,4 +1,4 @@
-console.log('Im Working. Im JS');
+console.log("Im Working. Im JS");
 
 //Variable
 let a = 221;
@@ -44,7 +44,15 @@ const MyInfo = {
     age: 27,
     gender: "Male",
     favMovies: ["Along the gods", "LOTR", "Oldboy"],
-    favFood: [{ name: "Kimchi", fatty: false }, { name: "Cheese burger", fatty: true }]
+    favFood: [{
+            name: "Kimchi",
+            fatty: false
+        },
+        {
+            name: "Cheese burger",
+            fatty: true
+        },
+    ],
 };
 
 console.log(MyInfo);
@@ -55,13 +63,13 @@ console.log(MyInfo.age);
 
 //Function
 function sayHello() {
-    console.log('Hello!');
+    console.log("Hello!");
 }
 
 sayHello();
 
 function sayHello(potato) {
-    console.log('Hello!', potato);
+    console.log("Hello!", potato);
 }
 
 sayHello("Nicolas");
@@ -79,8 +87,42 @@ console.log(NicoHi);
 const calculator = {
     plus: function (a, b) {
         return a + b;
-    }
-}
+    },
+};
 
 const plus = calculator.plus(5, 5);
 console.log(plus);
+
+//DOM Functions
+const title = document.getElementById("title");
+title.innerHTML = "Hi!, From JS";
+title.style.color = 'red';
+document.title = "I own you now";
+
+//Event
+function handleResize() {
+    console.log("I have been resize");
+}
+
+window.addEventListener("resize", handleResize);
+
+function handleClick() {
+    title.style.color = "blue";
+}
+
+title.addEventListener("click", handleClick);
+
+//if-else
+if (10 > 5) {
+    console.log("hi");
+} else {
+    console.log("ho");
+}
+
+if (20 > 5 && "nico" === "nico") {
+    console.log("yes");
+} else {
+    console.log("no");
+}
+
+//Dom if-else function
